@@ -15,7 +15,7 @@ setuptools.setup(
     long_description=long_desc,
     url="https://github.com/TimilsinaBimal/freetutorials-dl",
     long_description_content_type="text/markdown",
-    download_url="",
+    download_url="https://github.com/TimilsinaBimal/freetutorials-dl/archive/freetutorials-dlv1.0.tar.gz",
     install_requires=[
         'youtube-dl',
         'requests',
