@@ -38,6 +38,7 @@ class Course:
 
         # sanitize
         section_title = re.sub(r"[-]{2,}", '', section_title)
+        section_title = re.sub(r'[0-9]+', '', section_title)
 
         return section_title.strip()
 
@@ -49,12 +50,13 @@ class Course:
             # video title
             video_title = vid_raw.find(
                 'a', {'class': 'list-brief__item__content'})
+            video_title = re.sub(r'[0-9]+', '', video_title)
             video_title = video_title.text.strip()
 
             # video links
             lenk = "https://learningcrux.com" + \
                 vid_raw.find(
-                    'a', {'class': 'list-brief__item__content'})['href'].replace('video', 'play')
+                    'a', {'class': 'list-brief__item__content'})['href'].replace('video', 'play') + '/720?type=sort'
             videos.append({
                 'title': video_title,
                 'url': lenk

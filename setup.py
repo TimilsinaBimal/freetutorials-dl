@@ -6,11 +6,11 @@ with open("README.md", 'r+') as f:
 
 setuptools.setup(
     name="freetutorials-dl",
-    version="1.0",
+    version="1.1",
     author="Timilsina Bimal",
     license="MIT",
     keywords=["freetutorialsdl", "downloader",
-              "freetutorials", "fts-sl"],
+              "freetutorials", "fts-dl"],
     description="Downloader for freetutorials.ca",
     long_description=long_desc,
     url="https://github.com/TimilsinaBimal/freetutorials-dl",

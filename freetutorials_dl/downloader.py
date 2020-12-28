@@ -3,7 +3,7 @@ import os
 import re
 
 
-def download(course, course_title, output=os.getcwd()):
+def download(course, course_title, output):
     course_title = re.sub(r'[^\w\-_\. ]', '_', course_title)
 
     if os.path.exists(output) == False:
@@ -26,5 +26,5 @@ def download(course, course_title, output=os.getcwd()):
             video_count += 1
             print(
                 f"[freetutorials] title: {str(video_count)}. {video['title']}")
-            with YoutubeDL({'outtmpl': os.path.join(output, course_title, str(index) + ". " + section['section'], str(video_count) + ". " + video['title']) + '.mp4'}) as ytdl:
+            with YoutubeDL({'outtmpl': os.path.join(output, course_title, str(index) + ". " + section['section'], video['title']) + '.mp4'}) as ytdl:
                 ytdl.download([video['url']])
