@@ -4,17 +4,22 @@ A utility to download courses/videos from freetutorials.ca by using [Youtube-DL]
 
 <hr>
 
-## How to use
+## Installation
+Install from pypi.org
 
-install from pypi.org
+#### Windows
+```sh
+$ pip install freetutorials-dl
+```
+#### Linux and MacOS
 
 ```sh
-$ sudo pip install freetutorials-dl
+$ pip3 install freetutorials-dl
 ```
 
 <hr>
 
-## Instructions
+## Usage
 
 The tool can be accesed via `fts-dl` command.
 eg.
@@ -37,12 +42,11 @@ $ fts-dl --url https://www.freetutorials.ca/course/some-course --output ~/my_cou
 
 and it will save in the given path.
 
-## Command Docs
+## Options
+ - ```-u``` or ```--url``` : The Course Url to download(Copy it from Course page)
+ - ```-o``` or ```--output``` : Path to save the video
+ - ```--help``` : Help
 
-| Flag             | Usage                                 |
-| ---------------- | ------------------------------------- |
-| -u <br> --url    | url of course/video from learningcrux |
-| -o <br> --output | Output path                           |
 
 #### License
 
